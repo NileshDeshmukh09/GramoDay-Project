@@ -4,7 +4,7 @@ var mysql = require('mysql');
 // var db = require("./src/constants/backendConfig");
 // var connection = mysql.createConnection(db.mysql.local);
 var apiRouter = require('./routes/index');
-const port = 4000;
+const port = 3000;
 
 
 app.use(express.json({ limit: '50mb' }));
@@ -18,8 +18,8 @@ app.use('/api', apiRouter);
 //     console.log('You are now connected...')
 //   })
 
-app.listen(4000 , (req, res) => {
-	console.log(`Server Running on http://localhost:4000`);
+app.listen(3000 , (req, res) => {
+	console.log(`Server Running on http://localhost:3000`);
 });
 
 module.exports = app;

@@ -48,7 +48,7 @@ function getUserByID(req ,res){
             return res.status(500).send(responseData);
         }
         responseData.success = true;
-        responseData.msg = "Successfully signed up!";
+        responseData.msg = "Successfully Fetched  Details!";
         responseData.data = {
             data : result1
         };
