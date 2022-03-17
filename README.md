@@ -32,7 +32,9 @@ POST  - Request 2 :  ``` localhost:4000/api/report ```
 
 GET the aggregated Report  
 
- #### Calculate the mean of prices.
+ ####  mean of prices and return the reportID of the generated report below as shown
+ 
+  - Below image are the Result of  calulating mean for the above two Images Reports.
 
  - GET - ``` localhost:4000/api/report?reportID=1 ```
 
