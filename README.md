@@ -30,3 +30,10 @@ POST  - Request 2 :  ``` localhost:4000/api/report ```
 ![Screenshot (79)](https://user-images.githubusercontent.com/86465008/158895556-467ae9af-a96b-4c23-8f1f-a4dd272f2c34.png)
 
 
+GET the aggregated Report  
+
+ #### Calculate the mean of prices.
+
+ - GET - ``` localhost:4000/api/report?reportID=1 ```
+
+![Screenshot (81)](https://user-images.githubusercontent.com/86465008/158895915-c47ad5cb-4332-41c8-a0b5-5f468bb89a7d.png)
