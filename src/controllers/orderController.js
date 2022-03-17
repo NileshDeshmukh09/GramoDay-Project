@@ -28,9 +28,13 @@ function getOrderDetailsByUserID(req, res){
                 return res.status(500).send({message: "Not Ok!"});
             }
             return res.status(200).send({
-                success: true,
-                msg: `Successfully fetched order Details by ${data.UserID}`,
-                orderDetails : result
+                reportDetail : ({
+                    success: true,
+                    msg: `Successfully fetched order Details by  UserID : ${data.UserID}`,
+                    reportID : result[0].Priceunit,
+                    orderDetails : result
+
+                })
             })
         })
     }
