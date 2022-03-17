@@ -1,6 +1,6 @@
 const Report = require("../models/report");
 
-
+/* controller for Adding Reports */
 function addReport(req, res) {
     let data = req.body;
     let responseData = {
@@ -16,23 +16,20 @@ function addReport(req, res) {
                 responseData.msg = "Error in creating Report!"
                 return res.status(500).send(responseData);
             }
-            responseData.success = true;
+            responseData.success = "Success";
             responseData.msg = "Successfully added Report!";
-            responseData.data = {
-                reportID: data.reportID,
+            responseData.reportID = data.reportID;
                 
-            };
+            
             return res.status(200).send(responseData);
         })
-
-
-
     }
     else {
         return res.status(400).send(responseData);
     }
 }
 
+/* Controller for get  Reports */
 function getReport(req, res) {
     let data = req.query;
     let responseData = {
@@ -46,16 +43,16 @@ function getReport(req, res) {
                 responseData.msg = "Error in Report!"
                 return res.status(500).send(responseData);
             }
-            responseData.success = true;
+            responseData.success = "success";
             responseData.msg = "Successfully Fetch Report!";
-            responseData.data = {
-                reportDetail: result,
-            };
+            responseData.reportDetail = result;
+        
             return res.status(200).send(responseData);
         })
 
     }
     else {
+        /* Bad Request */
         return res.status(400).send(responseData);
     }
 

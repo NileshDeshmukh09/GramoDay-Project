@@ -1,5 +1,6 @@
 const sqlConnection = require("../service/sqlConnection");
 
+/* Database for adding reports */
 function addReports(data ,cb){
     let sql = `
     INSERT INTO 
@@ -9,7 +10,7 @@ function addReports(data ,cb){
         (?, ? , ?,  ? , ?, ? , ? , ? ,?, ?, now() , now());
     `;
     let values = [];
-    
+
     values.push(data.UserID);
     values.push(data.marketID);
     values.push(data.marketName);
@@ -26,11 +27,12 @@ function addReports(data ,cb){
     })
 }
 
+/* Query for getting reports from the Database */
 function getReportDetails(data , cb){
    let sql = `
     SELECT 
         reportID as ID, cmdtyName, CmdtyID, marketID, marketName, marketType,  group_Concat(priceUnit separator ',') as priceUnit,
-        group_Concat( UserID separator',') as Users , round(AVG(price DIV convFactor )) as avgprice, createdAt 
+        group_Concat( UserID separator',') as Users , round(AVG(price DIV convFactor )) as Avgprice, createdAt 
     FROM
         report 
     WHERE
@@ -45,4 +47,6 @@ function getReportDetails(data , cb){
     })
 }
 
+
+/* exporting all the Models */
 module.exports = { addReports , getReportDetails }
