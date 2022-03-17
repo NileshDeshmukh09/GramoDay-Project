@@ -12,6 +12,7 @@ To get started and run the app:
  - Run ``` npm install ``` to install the corresponding node packages
  - Run  ``` npm start ``` to run the app on http://localhost:4000
 
+##### Below are the Result  : -
 
 ### Result Images 
 
@@ -25,5 +26,7 @@ POST  - ``` localhost:4000/api/report ```
 
 Another Data of create report request is :
 POST  - Request 2 :  ``` localhost:4000/api/report ```
+
+![Screenshot (79)](https://user-images.githubusercontent.com/86465008/158895556-467ae9af-a96b-4c23-8f1f-a4dd272f2c34.png)
 
 
